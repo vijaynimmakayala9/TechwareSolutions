@@ -53,7 +53,7 @@ export default function Post({ params }) {
     "@type": "BlogPosting",
     headline: b.title,
     description: b.excerpt,
-    image: `${site.url}${b.image}`,
+    image: b.image,
     datePublished: b.published,
     dateModified: b.updated,
     mainEntityOfPage: url,
@@ -86,7 +86,7 @@ export default function Post({ params }) {
           </p>
           <Image
             src={b.image}
-            alt={`Illustration for ${b.title}`}
+            alt={`Cover image for ${b.title}`}
             width={640}
             height={480}
             priority

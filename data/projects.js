@@ -1,3 +1,4 @@
+import { images } from "@/data/images";
 // SAMPLE CONCEPTS ONLY, not completed client work. Replace with real projects when available.
 export const categories = [
   "All",
@@ -13,7 +14,7 @@ export const projects = [
     category: "E-commerce",
     industry: "Retail",
     tech: ["Next.js", "Stripe"],
-    image: "/images/project-ecommerce.svg",
+    image: images.projectEcommerce,
     desc: "Concept: a fast online store with catalogue, search and secure checkout.",
   },
   {
@@ -22,7 +23,7 @@ export const projects = [
     category: "Mobile App",
     industry: "Services",
     tech: ["React Native", "Node.js"],
-    image: "/images/project-app.svg",
+    image: images.projectApp,
     desc: "Concept: job scheduling and status updates for technicians on the go.",
   },
   {
@@ -31,7 +32,7 @@ export const projects = [
     category: "Website",
     industry: "Healthcare",
     tech: ["Next.js", "Tailwind CSS"],
-    image: "/images/project-website.svg",
+    image: images.projectWebsite,
     desc: "Concept: clear service pages, opening hours and an enquiry form.",
   },
   {
@@ -40,7 +41,7 @@ export const projects = [
     category: "Digital Marketing",
     industry: "Education",
     tech: ["Google Ads", "GA4"],
-    image: "/images/project-marketing.svg",
+    image: images.projectMarketing,
     desc: "Concept: paid search campaign with conversion tracking and monthly reports.",
   },
   {
@@ -49,7 +50,7 @@ export const projects = [
     category: "E-commerce",
     industry: "Fashion",
     tech: ["Next.js", "Resend"],
-    image: "/images/project-ecommerce.svg",
+    image: images.projectEcommerce,
     desc: "Concept: product pages designed for mobile shoppers.",
   },
   {
@@ -58,7 +59,7 @@ export const projects = [
     category: "Mobile App",
     industry: "Wellness",
     tech: ["Flutter", "Firebase"],
-    image: "/images/project-app.svg",
+    image: images.projectApp,
     desc: "Concept: book, reschedule and get reminders in a few taps.",
   },
   {
@@ -67,7 +68,7 @@ export const projects = [
     category: "Website",
     industry: "Manufacturing",
     tech: ["React", "Next.js"],
-    image: "/images/project-website.svg",
+    image: images.projectWebsite,
     desc: "Concept: structured multi-page site with product catalogue.",
   },
   {
@@ -76,7 +77,7 @@ export const projects = [
     category: "Digital Marketing",
     industry: "Professional services",
     tech: ["Search Console", "Lighthouse"],
-    image: "/images/project-marketing.svg",
+    image: images.projectMarketing,
     desc: "Concept: technical audit and content plan for organic growth.",
   },
 ];

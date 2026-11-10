@@ -1,4 +1,5 @@
 "use client";
+import { images } from "@/data/images";
 import { useState, useEffect, useRef } from "react";
 import {
   motion,
@@ -73,8 +74,8 @@ export function AboutPreview() {
         </div>
         <ImageReveal>
           <Image
-            src="/images/about.svg"
-            alt="Illustration of the TechWare team"
+            src={images.about}
+            alt="The TechWare team at work"
             width={640}
             height={480}
             className="h-auto w-full rounded-3xl shadow-soft"
@@ -207,7 +208,7 @@ export function ProjectsPreview() {
             <article className="overflow-hidden rounded-2xl border border-line bg-white">
               <Image
                 src={p.image}
-                alt={`${p.title} concept illustration`}
+                alt={`${p.title} concept preview`}
                 width={640}
                 height={480}
                 className="h-auto w-full"

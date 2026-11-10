@@ -6,7 +6,7 @@ export default function ProjectCard({ p }) {
       <div className="overflow-hidden">
         <Image
           src={p.image}
-          alt={`${p.title} concept illustration`}
+          alt={`${p.title} concept preview`}
           width={640}
           height={480}
           className="h-auto w-full transition duration-500 group-hover:scale-105"

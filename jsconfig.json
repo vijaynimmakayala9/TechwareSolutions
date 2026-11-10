@@ -1,8 +1,1 @@
-{
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["./*"]
-    }
-  },
-  "exclude": ["node_modules", ".next"]
-}
+{ "compilerOptions": { "paths": { "@/*": ["./*"] } } }

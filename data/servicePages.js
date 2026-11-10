@@ -1,11 +1,12 @@
+import { images } from "@/data/images";
 // Content for the three service detail pages. Edit freely.
 const o = (a) => a.map(([title, desc]) => ({ title, desc }));
 export const servicePages = {
   "web-development": {
     name: "Website Development",
     path: "/services/web-development",
-    image: "/images/web-development.svg",
-    imageAlt: "Illustration of a website layout in a browser window",
+    image: images.webDevelopment,
+    imageAlt: "Developer writing website code on a laptop",
     seoTitle: "Website Development Services",
     seoDesc:
       "Custom website development with React.js and Next.js: business sites, corporate sites, landing pages, e-commerce, API integration and maintenance.",
@@ -63,8 +64,8 @@ export const servicePages = {
   "app-development": {
     name: "Mobile App Development",
     path: "/services/app-development",
-    image: "/images/app-development.svg",
-    imageAlt: "Illustration of two mobile phones showing an app",
+    image: images.appDevelopment,
+    imageAlt: "Person using a mobile app on a smartphone",
     seoTitle: "Mobile App Development Services",
     seoDesc:
       "Android, iOS and cross-platform mobile app development with React Native and Flutter, including UI/UX design, backend integration and app maintenance.",
@@ -110,8 +111,8 @@ export const servicePages = {
   "digital-marketing": {
     name: "Digital Marketing",
     path: "/services/digital-marketing",
-    image: "/images/digital-marketing.svg",
-    imageAlt: "Illustration of an analytics dashboard with a rising chart",
+    image: images.digitalMarketing,
+    imageAlt: "Marketing analytics charts on a laptop screen",
     seoTitle: "Digital Marketing Services",
     seoDesc:
       "Digital marketing services including SEO, social media, Google Ads, PPC, content marketing, branding and analytics reporting for growing businesses.",

@@ -1,3 +1,4 @@
+import { images } from "@/data/images";
 import Image from "next/image";
 import ImageReveal from "@/components/shared/ImageReveal";
 import {
@@ -7,6 +8,8 @@ import {
   Handshake,
   Gauge,
   Users,
+  Award,
+  GraduationCap,
 } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import CTASection from "@/components/shared/CTASection";
@@ -80,8 +83,8 @@ export default function About() {
           </div>
           <ImageReveal>
             <Image
-              src="/images/about.svg"
-              alt="Illustration of the TechWare team"
+              src={images.about}
+              alt="The TechWare team at work"
               width={640}
               height={480}
               priority
@@ -177,27 +180,95 @@ export default function About() {
         </div>
       </section>
 
-      <section className="px-6 py-20">
+      <section className="relative overflow-hidden px-6 pb-24 pt-20">
         <div className="mx-auto max-w-6xl">
-          <SectionHeading title="Leadership" />
-          <div className="mx-auto max-w-md rounded-3xl border border-line bg-white p-8 text-center shadow-soft">
-            <div className="mx-auto flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-brand-light">
-              <Image
-                src="/CEO/ceo.png"
-                alt={`${site.ceo.name} - CEO of TechWare Solutions`}
-                width={96}
-                height={96}
-                className="h-full w-full rounded-full object-cover"
+          <SectionHeading
+            title="Our CEO"
+            text="The person steering TechWare Solutions."
+          />
+          <div className="relative mt-20 md:mt-24">
+            {/* Dark panel */}
+            <div className="relative overflow-hidden rounded-[2rem] bg-brand-dark px-8 py-12 shadow-soft sm:px-12 md:py-16 md:pr-[44%]">
+              <div
+                className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-brand/20 blur-3xl"
+                aria-hidden="true"
               />
+              <div
+                className="pointer-events-none absolute -bottom-28 left-1/3 h-72 w-72 rounded-full bg-brand-light/10 blur-3xl"
+                aria-hidden="true"
+              />
+              <div className="relative">
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-light">
+                  <Award className="h-4 w-4" aria-hidden="true" /> Leadership
+                </span>
+                <h3 className="mt-6 text-4xl font-extrabold leading-tight text-white sm:text-5xl">
+                  {site.ceo.name}
+                </h3>
+                <p className="mt-2 text-lg font-semibold text-brand-light">
+                  {site.ceo.title}
+                </p>
+                <div
+                  className="mt-6 h-1 w-16 rounded-full bg-brand"
+                  aria-hidden="true"
+                />
+                <p className="mt-6 max-w-md leading-relaxed text-white/80">
+                  Leads TechWare Solutions with a focus on practical, well-built
+                  websites, mobile apps and digital marketing that help
+                  businesses grow.
+                </p>
+                <div className="mt-8 flex items-center gap-3 text-white/90">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10">
+                    <GraduationCap
+                      className="h-5 w-5 text-brand-light"
+                      aria-hidden="true"
+                    />
+                  </span>
+                  <div>
+                    <p className="text-xs uppercase tracking-wider text-white/60">
+                      Education
+                    </p>
+                    <p className="text-sm font-semibold">
+                      {site.ceo.education}
+                    </p>
+                  </div>
+                </div>
+                <ul className="mt-8 flex flex-wrap gap-2">
+                  {["Quality", "Transparency", "Long-term partnership"].map(
+                    (v) => (
+                      <li
+                        key={v}
+                        className="rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium text-white"
+                      >
+                        {v}
+                      </li>
+                    ),
+                  )}
+                </ul>
+              </div>
             </div>
 
-            <h3 className="mt-4 text-xl font-bold">{site.ceo.name}</h3>
-            <p className="text-brand">{site.ceo.title}</p>
-            <p className="mt-1 text-sm text-ink-soft">{site.ceo.education}</p>
+            {/* Overflowing portrait on the right */}
+            <div className="relative mx-auto mt-10 w-full max-w-xs sm:max-w-sm md:absolute md:-top-12 md:bottom-[-2.5rem] md:right-10 md:mt-0 md:w-[36%] md:max-w-none">
+              <div
+                className="absolute -right-4 -top-4 h-full w-full rounded-[2rem] border-2 border-brand"
+                aria-hidden="true"
+              />
+              <div className="relative h-full overflow-hidden rounded-[2rem] bg-brand-light shadow-soft">
+                <Image
+                  src="/CEO/ceo.png"
+                  alt={`Portrait of ${site.ceo.name}, ${site.ceo.title}`}
+                  width={900}
+                  height={1100}
+                  sizes="(min-width: 768px) 36vw, 90vw"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-5 left-1/2 w-[85%] -translate-x-1/2 rounded-2xl border border-line bg-white px-5 py-3 text-center shadow-soft md:-left-10 md:translate-x-0 md:w-auto md:text-left">
+                <p className="font-bold text-ink">{site.ceo.name}</p>
+                <p className="text-sm text-brand">{site.ceo.title}</p>
+              </div>
+            </div>
           </div>
-          <p className="mt-4 text-center text-xs text-ink-soft">
-            Add more team members in config/site.js when ready.
-          </p>
         </div>
       </section>
 

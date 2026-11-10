@@ -1,3 +1,4 @@
+import { images } from "@/data/images";
 // Local content, shaped like a CMS entry so it can later move to Sanity or Strapi.
 const author = { name: "TechWare Team", role: "Editorial" };
 export const blogs = [
@@ -9,7 +10,7 @@ export const blogs = [
     author,
     published: "2026-10-12",
     updated: "2026-10-12",
-    image: "/images/blog-web.svg",
+    image: images.blogWeb,
     featured: true,
     excerpt:
       "A simple way to decide between an informational website and an interactive web application.",
@@ -36,7 +37,7 @@ export const blogs = [
     author,
     published: "2026-10-20",
     updated: "2026-10-20",
-    image: "/images/blog-seo.svg",
+    image: images.blogSeo,
     excerpt:
       "The basics that help search engines crawl, understand and rank a new site.",
     sections: [
@@ -62,7 +63,7 @@ export const blogs = [
     author,
     published: "2026-10-28",
     updated: "2026-10-28",
-    image: "/images/blog-mobile.svg",
+    image: images.blogMobile,
     excerpt:
       "How to weigh cost, speed and device features when planning a mobile app.",
     sections: [
@@ -88,7 +89,7 @@ export const blogs = [
     author,
     published: "2026-11-03",
     updated: "2026-11-03",
-    image: "/images/blog-automation.svg",
+    image: images.blogAutomation,
     excerpt: "Repeated manual tasks are the best place to start saving time.",
     sections: [
       [

@@ -1,4 +1,5 @@
 "use client";
+import { images } from "@/data/images";
 import { useRef } from "react";
 import Image from "next/image";
 import {
@@ -93,8 +94,8 @@ export default function Hero() {
             transition={{ duration: 7, repeat: Infinity }}
           >
             <Image
-              src="/images/hero.svg"
-              alt="Illustration of a website and a mobile app"
+              src={images.hero}
+              alt="TechWare team collaborating on a web and app project"
               width={640}
               height={480}
               priority
