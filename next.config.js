@@ -10,7 +10,6 @@ const headers = [
 module.exports = {
   poweredByHeader: false,
   images: { formats: ["image/avif", "image/webp"] },
-  output: "export",
   async headers() {
     return [{ source: "/(.*)", headers }];
   },
